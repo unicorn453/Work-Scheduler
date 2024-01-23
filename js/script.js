@@ -47,5 +47,4 @@ function updateClass(inputEl, currentHour) {
   } else {
     inputEl.removeClass("past future").addClass("present");
   }
-  console.log(hour);
 }
