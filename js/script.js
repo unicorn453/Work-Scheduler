@@ -1,7 +1,5 @@
-// ui-button-icon-only ui-icon-save
-$(function () {
-  $("button").button({
-    icon: "ui-icon-save",
-    iconPosition: "center",
-  });
-});
+// showing the current date
+var today = dayjs();
+console.log(today);
+
+$("#currentDay").text(today.format("dddd, MMMM D"));
