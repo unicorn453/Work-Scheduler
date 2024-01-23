@@ -11,7 +11,7 @@ $(document).ready(function () {
     var storedInput = localStorage.getItem("input_" + i);
 
     if (storedInput !== null) {
-      // Set the stored value to the corresponding input element
+      // set the stored value to the corresponding input element
       input.eq(i).val(JSON.parse(storedInput));
     }
   }
@@ -22,7 +22,11 @@ buttonEl.on("click", ".saveBtn", function (event) {
   var buttonIndex = buttonEl.find(".saveBtn").index(clickedButton);
   var inputEl = input.eq(buttonIndex);
 
-  localStorage.setItem("input_" + buttonIndex, JSON.stringify(inputEl.val()));
-
-  console.log(inputEl.val());
+  changeValue(buttonIndex, inputEl.val());
 });
+// adding function to set a new value and delete the old one
+function changeValue(buttonIndex, newValue) {
+  localStorage.removeItem("input_" + buttonIndex);
+
+  localStorage.setItem("input_" + buttonIndex, JSON.stringify(newValue));
+}
