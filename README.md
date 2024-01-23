@@ -1,87 +1,30 @@
-# Third-Party APIs: Work Day Scheduler
+# Work-Scheduler
 
-## Your Task
+## Description
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+This work schedule page is a simple and efficient way to keep track of your daily tasks. The app automatically tracks time for you, displaying the current day of the week and color codes each time field - grey for the past time of the day, red for the present time, and green for future hours left in your standard working day from 9AM to 5PM. If you refresh the page, your schedule will still be saved. However, if you need to modify any tasks, you can simply overwrite them and click "save".
 
-You'll need to use the [Day.js](https://day.js.org/docs/en/display/format) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+Link to the deployed project:
+https://unicorn453.github.io/Work-Scheduler/
 
-## User Story
+When opened the page should look like this:
+![Screenshot of the project page](./assets/Work-Scheduler.png)
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+## Installation
 
-## Acceptance Criteria
+N/A
 
-The app should:
+## Usage
 
-- Display the current day at the top of the calender when a user opens the planner.
+To use the Work Scheduler app, simply add the task you want for any given time slot between 9 AM and 5 PM. Remember to save it with the button on the right so the task remains the same even if the page reloads. At the top of the page, you'll see the current day of the week, month, and date. Depending on your time zone, your schedule will turn different colours. The time slot that has passed will be grey, the present hour will be red, and the future hours will be green. To change and reassign the task, overwrite it and click save.
 
-- Present timeblocks for standard business hours when the user scrolls down.
+## Credits
 
-- Color-code each timeblock based on past, present, and future when the timeblock is viewed.
+The development of the code process involved leveraging ChatGPT.
+Other resources:
+I used a previously written README file as a template to create this README.
+‌
 
-- Allow a user to enter an event when they click a timeblock
+## License
 
-- Save the event in local storage when the save button is clicked in that timeblock.
-
-- Persist events between refreshes of a page
-
-The following animation demonstrates the application functionality:
-
-![A user clicks on slots on the color-coded calendar and edits the events.](./05-third-party-apis-homework-demo.gif)
-
-## Grading Requirements
-
-This homework is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-- Satisfies all of the above acceptance criteria plus the following:
-
-  - Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-- Application deployed at live URL
-
-- Application loads with no errors
-
-- Application GitHub URL submitted
-
-- GitHub repo contains application code
-
-### Application Quality: 15%
-
-- Application user experience is intuitive and easy to navigate
-
-- Application user interface style is clean and polished
-
-- Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-- Repository has a unique name
-
-- Repository follows best practices for file structure and naming conventions
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages
-
-- Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-- The URL of the deployed application
-
-- The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Please refer to the LICENSE in the repo.
