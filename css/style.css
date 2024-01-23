@@ -74,3 +74,6 @@ header {
 .ui-icon {
   padding-left: 20px;
 }
+.val {
+  display: none;
+}

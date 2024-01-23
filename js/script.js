@@ -1,8 +1,8 @@
 var buttonEl = $(".buttons");
 var input = $(".col-10");
-
 // showing the current date
 var today = dayjs();
+var currentHour = today.hour();
 input.addClass("textarea");
 $("#currentDay").text(today.format("dddd, MMMM D"));
 //set function for values when page is reloaded
@@ -29,4 +29,23 @@ function changeValue(buttonIndex, newValue) {
   localStorage.removeItem("input_" + buttonIndex);
 
   localStorage.setItem("input_" + buttonIndex, JSON.stringify(newValue));
+}
+// Function to update the class based on the current hour
+$(function () {
+  input.each(function (index, element) {
+    updateClass($(element), currentHour);
+  });
+});
+
+function updateClass(inputEl, currentHour) {
+  var hour = parseInt(inputEl.closest(".time-block").find(".val").text());
+
+  if (currentHour > hour) {
+    inputEl.removeClass("present future").addClass("past");
+  } else if (currentHour < hour) {
+    inputEl.removeClass("past present").addClass("future");
+  } else {
+    inputEl.removeClass("past future").addClass("present");
+  }
+  console.log(hour);
 }
